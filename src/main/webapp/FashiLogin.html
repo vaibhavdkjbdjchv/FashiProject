@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashiLogin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./FashiLogin.css">
+
+</head>
+
+<body>
+	<div id="preloader">
+		<img alt="" src="./images/preloader.gif">
+	</div>
+
+    <div id="left">
+        <img id="img1" src="./images/lbuc5bua.png" alt="">
+        <img id="img2" src="./images/busy-project-manager-overwhelmed-by-work.jpg" alt="">
+    </div>
+    <div id="right">
+        <div id="switch">
+            <div id="toogle">
+                <span id="user">user</span>
+                <span id="seller">seller</span>
+                <i class="indicator"></i>
+            </div>
+        </div>
+        <form action="fashi" method="post" id="UserSction">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <h1 id="heding">Login in to Fashi.</h1>
+            <div id="middle">
+                <span>
+                    <hr>
+                </span>
+                <p id="or">***</p>
+                <span>
+                    <hr>
+                </span>
+            </div>
+            <input type="text" name="username" placeholder="Phone,email,or username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button class="buttons">Next</button>
+            <button id="Forget">Forget Password?</button>
+            <p id="p">Don't have an account?<a href="./FashiSignUp.html">Sign up</a></p>
+        </form>
+
+        <form action="AddProduct.jsp" id="SellerSction">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <h1 id="heding">Login in to Fashi.</h1>
+            <div id="middle">
+                <span>
+                    <hr>
+                </span>
+                <p id="or">***</p>
+                <span>
+                    <hr>
+                </span>
+            </div>
+            <input type="text" name="username" placeholder="Phone,email,or username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button class="buttons">Next</button>
+            <button id="Forget">Forget Password?</button>
+            <p id="p">Don't have an account?<a href="./FashiSignUp.html">Sign up</a></p>
+        </form>
+    </div>
+</body>
+<script>
+    const user = document.getElementById("UserSction");
+    const img1 = document.getElementById("img1");
+    const img2 = document.getElementById("img2");
+    const seller = document.getElementById("SellerSction");
+    const toggle = document.getElementById('toogle');
+    const use = document.getElementById('user');
+    const sell = document.getElementById('seller');
+    toggle.onclick = function () 
+    {
+        toggle.classList.toggle('active');
+        user.classList.toggle('active');
+        seller.classList.toggle('unactive');
+        img1.classList.toggle('active');
+        img2.classList.toggle('unactive');
+        use.classList.toggle('active');
+        sell.classList.toggle('unactive');
+    }
+
+
+</script>
+
+<script>
+            	var loader = document.getElementById("preloader");
+            	
+            	window.addEventListener("load",function(){
+            		loader.style.display = "none";
+            	})
+            </script>
+
+</html>

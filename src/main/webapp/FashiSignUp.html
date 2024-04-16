@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashiLogin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./FashiSignup.css">
+
+</head>
+
+<body>
+    <div id="left">
+        <img src="./images/lbuc5bua.png" alt="">
+    </div>
+    <div id="right">
+        <div id="form">
+            <form action="fashisignup" method="post">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <!--<img id="logo" src="./Screenshot 2023-08-07 134045.png" alt="">-->
+                <h1 id="heding">Sign in to Fashi.</h1>
+                <div id="middle">
+                    <span>
+                        <hr>
+                    </span>
+                    <p id="or">***</p>
+                    <span>
+                        <hr>
+                    </span>
+                </div>
+                <label id="na" for="name">Name</label>
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <label id="g" for="">Gender</label><br>
+                <div id="gender">
+                    <input type="radio" name="gender" class="gender" value="male">Male
+                    <input type="radio" name="gender" class="gender" value="female">Female
+                </div>
+                <label for="name">Username</label>
+                <input type="text" name="username" id="Username" placeholder="Phone,email,or username" required>
+                <label for="name">Password</label>
+                <input type="password" name="password" id="pwd" title="Password must contain 1 Uppercase 1 lowercase 1 no. value 1 Spesial Character " placeholder="Create Password" required>
+                <h1 class="buttons" style=" width: 100%; background: red; color: white; display: flex; align-items: center; justify-content: center;" id="Password-check">Weak Password</h1>
+                <button class="buttons" style="display: none; background:rgb(231, 171, 60); width: 100%;" id="btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+       
+            let inputField = document.getElementById("pwd");
+            let usernameinputField = document.getElementById("Username");
+            let test = document.getElementById("Password-check");
+            let button = document.getElementById("btn");
+            
+
+
+            inputField.addEventListener("keyup", function () { 
+				 let isUpperCase = false;
+            let isLowerCase = false;
+            let isNumber = false;
+            let isSpecial = false;
+            let PasswordStrong = false;
+            let usernamelength = false;
+            
+                console.log(test);
+                test.style.display = "block";
+                test.style.paddingTop = "7px";
+
+                let pass = inputField.value;
+
+                button.style.display = "none";
+                for (let index = 0; index < pass.length; index++) {
+                    let c = pass.charAt(index);
+                    if (c >= 'A' && c <= 'Z') {
+                        isUpperCase = true;
+                    } else if (c >= 'a' && c <= 'z') {
+                        isLowerCase = true;
+                    } else if (c >= '0' && c <= '9') {
+                        isNumber = true;
+                    } else {
+                        isSpecial = true;
+                    }
+                    console.log(isUpperCase);
+                    console.log(isLowerCase);
+                    console.log(isNumber);
+                    console.log(isSpecial);
+
+                }
+
+
+                if (pass.length >= 8 && isUpperCase && isLowerCase && isNumber && isSpecial) {
+                    button.style.display = "block";
+                    test.style.display = "none";
+                }
+
+            });
+    </script>
+</body>
+
+</html>

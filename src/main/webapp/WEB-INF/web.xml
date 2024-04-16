@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>FashiProject</display-name>
+  <welcome-file-list>
+    <welcome-file>Fashi.jsp</welcome-file>
+    <welcome-file>Fashi.css</welcome-file>
+    <welcome-file>FashiLogin.html</welcome-file>
+    <welcome-file>FashiLogin.css</welcome-file>
+    <welcome-file>FashiSignUp.html</welcome-file>
+    <welcome-file>FashiSignup.css</welcome-file>
+  </welcome-file-list>
+  
+  <!-- <servlet-mapping>
+  	<servlet-name>FashiLoginServlet</servlet-name>
+  	<url-pattern>/fashisignup</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>FashiLoginServlet</servlet-name>
+  	<servlet-class>com.ty.FashiLoginServletApp.FashiLoginServlet</servlet-class>
+  </servlet> --> 
+  
+  <!-- <servlet-mapping>
+  	<servlet-name>FashiLogin</servlet-name>
+  	<url-pattern>/fashi</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>FashiLogin</servlet-name>
+  	<servlet-class>com.ty.FashiLoginServletApp.FashiLogin</servlet-class>
+  </servlet>  -->
+  
+  <servlet-mapping>
+  	<servlet-name>MainServer</servlet-name>
+  	<url-pattern>/mainservlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>MainServer</servlet-name>
+  	<servlet-class>com.ty.FashiLoginServletApp.MainServer</servlet-class>
+  	<load-on-startup>0</load-on-startup>
+  </servlet>
+  
+</web-app>
